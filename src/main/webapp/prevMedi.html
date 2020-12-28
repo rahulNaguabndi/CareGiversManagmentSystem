@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Previous Medication</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+     <style>
+		#div {
+			margin-top: 50px;
+			margin-left: 190px;
+		}
+    #add div {
+      padding-bottom: 5px;
+    }
+    option {
+    padding-bottom: 10px;
+  }
+	</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="color: white;">
+
+<ul class="navbar-nav">
+<li class="nav-item"><h3 style="margin-left: 20px;">Sanjana</h3></li>
+<li class="nav-item"><h3 style="margin-left: 600px;">DOB: 28/08/96</h3></li>
+<li class="nav-item"><h3 style="margin-left: 300px;">Age: 22</h3></li>
+</ul>
+</nav>
+<div id="div" class="container">
+	<h4>Previous treatment details</h4>
+	<form method="POST" action="#" class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2">Name of medicine:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="medicine" placeholder="Enter Medicine" name="medicine" path="medicine" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Dose:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="dose" placeholder="Enter Dose" name="dose" path="dose" path="dose" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Form:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="form" placeholder="Enter Form" name="form" path="form" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Route:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="route" placeholder="Enter Route" name="route" path="route" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Strength:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="strength" placeholder="Enter Strength" name="strength" path="strength" required>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2">Frequency:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="frequency" placeholder="Enter Frequency" name="frequency" path="frequency" required>
+      </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="control-label col-sm-2">Date From:</label>
+        <div class="col-sm-10">
+        <input type="date" class="datefrom" id="datefrom" placeholder="Enter Date" name="datefrom" path="datefrom" required>
+         </div>
+    </div>
+    <div class="form-group">
+               <label class="control-label col-sm-2">Date To:</label>
+               <div class="col-sm-10">
+                  <input type="date" class="form-control" id="dateto" placeholder="Enter Date" name="dateto" path="dateto" required>
+               </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="Submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+</form>
+</div>
+
+<!-- Footer -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="color: white;margin-top: 181px;">
+    <div style="margin-left: 800px;">
+    <label>Status</label>
+<select style="width: 150px;height: 30px;padding-bottom: 5px;" id="opt" data-toggle="modal" data-target="#myModa">
+    
+</select>
+</div>
+</nav>
+<script>
+    function myFunction() {
+    $('#myModa').modal('toggle');
+    var option_value = document.getElementById("select").value;
+    document.getElementById("opt").innerHTML = "<option>"+option_value+"</option>";
+    }
+</script>
+  <!-- Footer -->
+  <!-- The Modal -->
+  <div class="modal fade" id="myModa">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+    <select multiple="multiple" class="text-center" onchange="myFunction();" id="select" style="width: 265px;height: 80px;padding-top: 10px;overflow-y: hidden;">
+    <option>In Progress</option>
+    <option>Completed</option>
+</select>
+</div>
+</div>
+</div>
+  </div>
+</body>
+</html>
